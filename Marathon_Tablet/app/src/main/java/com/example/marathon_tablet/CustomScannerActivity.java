@@ -23,11 +23,11 @@ public class CustomScannerActivity extends CaptureActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_scanner);
-        type = "number";
         phoneButton = findViewById(R.id.phoneButton);
         number = findViewById(R.id.number);
         record = findViewById(R.id.record);
 
+        setClickedText();
         backPressCloseHandler = new BackPressCloseHandler(this);
 
         barcodeScannerView = (DecoratedBarcodeView)findViewById(R.id.zxing_barcode_scanner);
@@ -105,4 +105,18 @@ public class CustomScannerActivity extends CaptureActivity {
         return type;
     }
 
+    public void setClickedText(){
+        switch (type){
+            case "number":
+                number.setTextColor(getResources().getColor(R.color.white));
+                record.setTextColor(Color.parseColor("#585858"));
+                type="number";
+                break;
+            case "record":
+                number.setTextColor(Color.parseColor("#585858"));
+                record.setTextColor(getResources().getColor(R.color.white));
+                type="record";
+                break;
+        }
+    }
 }
