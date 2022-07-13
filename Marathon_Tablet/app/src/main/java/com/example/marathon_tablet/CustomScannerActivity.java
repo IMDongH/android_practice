@@ -12,17 +12,18 @@ import com.journeyapps.barcodescanner.CaptureManager;
 import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 
 public class CustomScannerActivity extends CaptureActivity {
-    private String type="number";
+    public static String type = "number";
     private CaptureManager capture;
     private DecoratedBarcodeView barcodeScannerView;
     private BackPressCloseHandler backPressCloseHandler;
     private Button phoneButton;
     private TextView number,record;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_scanner);
-
+        type = "number";
         phoneButton = findViewById(R.id.phoneButton);
         number = findViewById(R.id.number);
         record = findViewById(R.id.record);
@@ -81,26 +82,27 @@ public class CustomScannerActivity extends CaptureActivity {
     protected void onResume() {
         super.onResume();
         capture.onResume();
-        System.out.println("onresume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        System.out.println("onPause");
     }
 
     @Override
     protected void onDestroy() {
-        super.onRestart();
-
-        System.out.println("onPause");
+        super.onDestroy();
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         capture.onSaveInstanceState(outState);
+    }
+
+    public static String getType()
+    {
+        return type;
     }
 
 }
