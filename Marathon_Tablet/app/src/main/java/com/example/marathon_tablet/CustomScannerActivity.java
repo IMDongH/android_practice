@@ -1,11 +1,14 @@
 package com.example.marathon_tablet;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import com.journeyapps.barcodescanner.CaptureActivity;
 import com.journeyapps.barcodescanner.CaptureManager;
@@ -87,11 +90,14 @@ public class CustomScannerActivity extends CaptureActivity {
     @Override
     protected void onPause() {
         super.onPause();
+
+        capture.onPause();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        capture.onDestroy();
     }
 
     @Override
@@ -99,7 +105,10 @@ public class CustomScannerActivity extends CaptureActivity {
         super.onSaveInstanceState(outState);
         capture.onSaveInstanceState(outState);
     }
-
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig){
+        super.onConfigurationChanged(newConfig);
+    }
     public static String getType()
     {
         return type;
@@ -110,12 +119,10 @@ public class CustomScannerActivity extends CaptureActivity {
             case "number":
                 number.setTextColor(getResources().getColor(R.color.white));
                 record.setTextColor(Color.parseColor("#585858"));
-                type="number";
                 break;
             case "record":
                 number.setTextColor(Color.parseColor("#585858"));
                 record.setTextColor(getResources().getColor(R.color.white));
-                type="record";
                 break;
         }
     }
