@@ -2,6 +2,7 @@ package com.example.marathon_tablet;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,13 +13,28 @@ public class PrintActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_print);
 
+
+        TextView text1 = findViewById(R.id.text1);
+        TextView text2 = findViewById(R.id.text2);
+        TextView text3 = findViewById(R.id.text3);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
         Intent intent = getIntent();
 
         String data = intent.getStringExtra("data");
+        //QR데이터 or 휴대폰 번호 데이터
+        String auth = intent.getStringExtra("type");
+        //QR로 넘어온 데이터인지 휴대폰 번호로 넘어온 데이터인지 판단
+        //QR = qr, 휴대폰 번호 = phone
+        String type = CustomScannerActivity.getType();
+        //QR 화면에서 선택하는 번호표 출력인지 기록증 출력인지
+        //번호표 = number, 기록증 = record
 
+
+        text1.setText(data);
+        text2.setText(auth);
+        text3.setText(type);
         System.out.println(data);
     }
 
