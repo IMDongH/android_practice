@@ -69,6 +69,7 @@ public class CustomScannerActivity extends CaptureActivity {
         });
 
     }
+
     public void onBackPressed() {
         backPressCloseHandler.onBackPressed();
     }
@@ -80,18 +81,20 @@ public class CustomScannerActivity extends CaptureActivity {
     protected void onResume() {
         super.onResume();
         capture.onResume();
+        System.out.println("onresume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        capture.onPause();
+        System.out.println("onPause");
     }
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
-        capture.onDestroy();
+        super.onRestart();
+
+        System.out.println("onPause");
     }
 
     @Override
