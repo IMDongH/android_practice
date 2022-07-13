@@ -33,6 +33,8 @@ public class canvas_View extends View {
     protected void onDraw(Canvas canvas){
         super.onDraw(canvas);
         Paint pnt = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+
         pnt.setStrokeWidth(8);
         pnt.setColor(Color.RED);
 
