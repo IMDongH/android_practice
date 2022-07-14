@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전화번호를 입력해 주세요.."
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/PhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="연락처를 입력해주세요."
+        android:background="#E8E7EC"
+        android:inputType="phone"
+        android:maxLength="13"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/phone_round_button"
+        android:textSize="@dimen/phoneButtonText"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/phoneButtonPadding"
+        android:paddingRight="@dimen/phoneButtonPadding"
+        android:text="확인" />
+</LinearLayout>

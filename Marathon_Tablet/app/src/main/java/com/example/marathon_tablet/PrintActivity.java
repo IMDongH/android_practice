@@ -16,9 +16,6 @@ public class PrintActivity extends AppCompatActivity {
         setContentView(R.layout.activity_print);
 
 
-        TextView text1 = findViewById(R.id.text1);
-        TextView text2 = findViewById(R.id.text2);
-        TextView text3 = findViewById(R.id.text3);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
@@ -34,9 +31,6 @@ public class PrintActivity extends AppCompatActivity {
         //번호표 = number, 기록증 = record
 
 
-        text1.setText(data);
-        text2.setText(auth);
-        text3.setText(type);
         System.out.println(data);
     }
 

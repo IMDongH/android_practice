@@ -29,6 +29,10 @@
         android:id="@+id/okButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/marathon"
+        android:background="@drawable/phone_round_button"
+        android:textSize="@dimen/phoneButtonText"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/phoneButtonPadding"
+        android:paddingRight="@dimen/phoneButtonPadding"
         android:text="확인" />
 </LinearLayout>

@@ -48,7 +48,7 @@ public class PhoneActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    StartToast(PhoneNumber.getText().toString()+"올바르지 않은 전화번호 형식입니다.");
+                    StartToast("올바르지 않은 전화번호 형식입니다.");
                 }
             }
         });
@@ -58,7 +58,10 @@ public class PhoneActivity extends AppCompatActivity {
     public void onConfigurationChanged(@NonNull Configuration newConfig){
         super.onConfigurationChanged(newConfig);
     }
-
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
     public boolean validPhoneNumber(String number) {
         String regExp = "^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$";
         if (number.matches(regExp)) {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="topText">20dp</dimen>
+    <dimen name="buttonText">12dp</dimen>
+    <dimen name="margin">32dp</dimen>
+    <dimen name="topMargin">24dp</dimen>
+    <dimen name="qrArea">280dp</dimen>
+    <dimen name="buttonPadding">16dp</dimen>
+
+    <dimen name="phoneButtonText">16dp</dimen>
+    <dimen name="phoneButtonPadding">60dp</dimen>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff0000"
+        android:gravity="center"
+        android:text="번호표 출력"
+
+        android:textSize="@dimen/topText"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/zxing_barcode_scanner"
+        android:layout_margin="@dimen/topMargin"/>
+
+    <Button
+        android:id="@+id/record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff0000"
+        android:gravity="center"
+        android:text="기록증 출력"
+
+        android:textSize="@dimen/topText"
+        android:textColor="#585858"
+        app:layout_constraintLeft_toRightOf="@id/number"
+        app:layout_constraintTop_toTopOf="@+id/zxing_barcode_scanner"
+        android:layout_margin="@dimen/topMargin"/>
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/zxing_barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:zxing_scanner_layout="@layout/custom_barcode_scanner"
+        tools:layout_editor_absoluteY="108dp">
+
+    </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+    <Button
+        android:id="@+id/phoneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/zxing_barcode_scanner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/qr_round_button"
+        android:gravity="center"
+        android:text="전화번호로 인증하기   〉"
+        android:textColor="@color/white"
+        android:textSize="@dimen/buttonText"
+        app:layout_constraintBottom_toBottomOf="@+id/zxing_barcode_scanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/buttonPadding"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
