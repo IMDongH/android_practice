@@ -12,20 +12,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="전화번호를 입력해 주세요"
-        android:textStyle="bold"/>
+        android:textSize="@dimen/phoneText"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/phoneMargin"/>
 
     <EditText
         android:id="@+id/PhoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+
         android:hint="연락처를 입력해주세요."
-        android:background="#E8E7EC"
+        android:background="@drawable/phone_round_edittext"
+        android:textSize="@dimen/phoneEditText"
+        android:paddingLeft="@dimen/phoneEditTextPadding"
+        android:paddingRight="@dimen/phoneEditTextPadding"
+        android:paddingBottom="@dimen/phoneEditTextTBPadding"
+        android:paddingTop="@dimen/phoneEditTextTBPadding"
         android:inputType="phone"
         android:maxLength="13"
         android:gravity="center"/>
 
-    <Button
+    <android.widget.Button
         android:id="@+id/okButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,5 +41,6 @@
         android:textColor="@color/white"
         android:paddingLeft="@dimen/phoneButtonPadding"
         android:paddingRight="@dimen/phoneButtonPadding"
-        android:text="확인" />
+        android:text="확인"
+        android:layout_margin="@dimen/phoneMargin"/>
 </LinearLayout>

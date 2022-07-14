@@ -55,7 +55,7 @@
         android:layout_marginBottom="24dp"
         android:background="@drawable/qr_round_button"
         android:gravity="center"
-        android:text="전화번호로 인증하기   〉"
+        android:text="  전화번호로 인증하기   〉"
         android:textColor="@color/white"
         android:textSize="@dimen/buttonText"
         app:layout_constraintBottom_toBottomOf="@+id/zxing_barcode_scanner"

@@ -7,6 +7,11 @@
     <dimen name="qrArea">350dp</dimen>
     <dimen name="buttonPadding">20dp</dimen>
 
+    <dimen name="phoneText">30dp</dimen>
+    <dimen name="phoneMargin">30dp</dimen>
+    <dimen name="phoneEditText">20dp</dimen>
+    <dimen name="phoneEditTextPadding">150dp</dimen>
+    <dimen name="phoneEditTextTBPadding">10dp</dimen>
     <dimen name="phoneButtonText">20dp</dimen>
     <dimen name="phoneButtonPadding">80dp</dimen>
 </resources>

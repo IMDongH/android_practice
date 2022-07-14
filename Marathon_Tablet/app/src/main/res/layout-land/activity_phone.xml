@@ -4,35 +4,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    >
 
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="전화번호를 입력해 주세요.."
-        android:textStyle="bold"/>
+        android:text="전화번호를 입력해 주세요"
+        android:textSize="@dimen/phoneText"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/phoneMargin"/>
 
     <EditText
         android:id="@+id/PhoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:hint="연락처를 입력해주세요."
-        android:background="#E8E7EC"
+        android:background="@drawable/phone_round_edittext"
         android:inputType="phone"
         android:maxLength="13"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textSize="@dimen/phoneEditText"
+        android:paddingLeft="@dimen/phoneEditTextPadding"
+        android:paddingRight="@dimen/phoneEditTextPadding"
+        android:paddingBottom="@dimen/phoneEditTextTBPadding"
+        android:paddingTop="@dimen/phoneEditTextTBPadding"
+        />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/okButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/phone_round_button"
-        android:textSize="@dimen/phoneButtonText"
-        android:textColor="@color/white"
         android:paddingLeft="@dimen/phoneButtonPadding"
         android:paddingRight="@dimen/phoneButtonPadding"
-        android:text="확인" />
+        android:text="확인"
+        android:textColor="@color/white"
+        android:textSize="@dimen/phoneButtonText"
+        android:layout_margin="@dimen/phoneMargin"/>
 </LinearLayout>
