@@ -11,6 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:text="출력 중입니다"
+        android:textSize="@dimen/printText"
+        android:textStyle="bold"
         android:gravity="center"
         android:layout_weight="1"/>
 
@@ -52,15 +54,15 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="109dp"
+                android:layout_width="@dimen/printIcon"
+                android:layout_height="@dimen/printIcon"
                 android:src="@drawable/image_printer"
                 app:tint="@color/marathon" />
 
             <ProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:max="100" />
         </LinearLayout>
 

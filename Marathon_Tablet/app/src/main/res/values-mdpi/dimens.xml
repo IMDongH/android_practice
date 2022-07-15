@@ -15,4 +15,10 @@
     <dimen name="phoneEditTextTBPadding">8dp</dimen>
     <dimen name="phoneButtonText">16dp</dimen>
     <dimen name="phoneButtonPadding">64dp</dimen>
+
+    <dimen name="printText">24dp</dimen>
+    <dimen name="printRecordImage">24dp</dimen>
+    <dimen name="printNumberImage">24dp</dimen>
+    <dimen name="printIcon">90dp</dimen>
+    <dimen name="printPadding">40dp</dimen>
 </resources>
